@@ -49,4 +49,9 @@ public class GameInput : MonoBehaviour
         float isInteracting = playerInputActions.Player.Interact.ReadValue<float>();
         return isInteracting != 0f;
     }
+
+    private float GetInteractionPress()
+    {
+        return playerInputActions.Player.Interact.ReadValue<float>();
+    }
 }
