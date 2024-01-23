@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HandshakeMinigameBar : MonoBehaviour
@@ -31,17 +32,20 @@ public class HandshakeMinigameBar : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (currentHealth <= 0)
-        {
-            Debug.Log("You Lose!");
+        if (MinigameManager.Instance.IsGamePlaying()) 
+        { 
+            if (currentHealth <= 0)
+            {
+                Debug.Log("You Lose!");
+            }
+            if (!PlayerSquare.Instance.IsInsideHandshake())
+            {
+                currentHealth -= damageValue * Time.deltaTime;
+                Debug.Log(currentHealth);
+            }
+            MoveSquare();
+            MoveHandshake();
         }
-        if (!PlayerSquare.Instance.IsInsideHandshake())
-        {
-            currentHealth -= damageValue * Time.deltaTime;
-            Debug.Log(currentHealth);
-        }
-        MoveSquare();
-        MoveHandshake();
     }
 
     private void MoveSquare()

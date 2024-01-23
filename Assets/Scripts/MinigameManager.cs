@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandshakeMinigameManager : MonoBehaviour
+public class MinigameManager : MonoBehaviour
 {
-    public static HandshakeMinigameManager Instance { get; private set; }
+    public static MinigameManager Instance { get; private set; }
 
     public event EventHandler OnStateChanged;
 
@@ -80,6 +80,11 @@ public class HandshakeMinigameManager : MonoBehaviour
     public bool IsGameOver() 
     { 
         return state == State.GameOver;
+    }
+
+    public float GetCountdownToStartTimer()
+    {
+        return countdownToStartTimer;
     }
 
     public float GetGamePlayingTimerNormalized()
