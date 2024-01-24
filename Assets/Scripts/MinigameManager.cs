@@ -8,6 +8,8 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance { get; private set; }
 
     public event EventHandler OnStateChanged;
+    // TODO: Invoke OnDamageTaken so that the HealthBar component can update
+    public event EventHandler OnDamageTaken;
 
     private float waitingToStartTimer = 1f;
     private float countdownToStartTimer = 3f;
