@@ -11,13 +11,14 @@ public class HandshakeMinigameBar : MonoBehaviour
     [SerializeField] private Rigidbody2D handshakeRigidBody2D;
 
     private float speed = 100f;
-    private float movingTimerMax = 1f;
+    private float speedHandshake = 50f;
+    private float movingTimerMax = 2f;
     private float movingTimerMin = 0.2f;
     private float movingTimer;
     private float damageValue = 1f;
     private float maxHealth = 100f;
     private float currentHealth;
-    private int handshakeDirection;
+    private int handshakeDirection = 1;
 
     private void Start()
     {
@@ -72,11 +73,11 @@ public class HandshakeMinigameBar : MonoBehaviour
         {
             if (handshakeDirection > 0)
             {
-                handshakeRigidBody2D.velocity += new Vector2(speed * Time.deltaTime, 0);
+                handshakeRigidBody2D.velocity += new Vector2(speedHandshake * Time.deltaTime, 0);
             }
             else
             {
-                handshakeRigidBody2D.velocity -= new Vector2(speed * Time.deltaTime, 0);
+                handshakeRigidBody2D.velocity -= new Vector2(speedHandshake * Time.deltaTime, 0);
             }
         }
     }
@@ -88,7 +89,8 @@ public class HandshakeMinigameBar : MonoBehaviour
 
     private void SetNewHandshakeDirection()
     {
-        handshakeDirection = Random.Range(-1, 2);
+        handshakeDirection = handshakeDirection * -1;
+	handshakeRigidBody2D.velocity = Vector2.zero;
     }
 
 
