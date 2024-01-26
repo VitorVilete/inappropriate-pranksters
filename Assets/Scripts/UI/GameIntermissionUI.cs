@@ -14,6 +14,7 @@ public class GameIntermissionUI : MonoBehaviour
     private void Awake()
     {
         currentGameIntermissionSO = gameIntermissionSOList.Find(a => a.previousScene == Loader.previousScene);
+        Debug.Log(currentGameIntermissionSO);
         intermissionText.text = currentGameIntermissionSO.gameIntermissionText;
 
         nextButton.onClick.AddListener(() =>

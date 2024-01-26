@@ -25,6 +25,16 @@ public class GameInput : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        #if UNITY_EDITOR
+        if (Input.GetKey(KeyCode.U))
+        {
+            Loader.Load(Loader.Scene.GameIntermissionScene);
+        }
+        #endif
+    }
+
     private void Pause_performed(InputAction.CallbackContext obj)
     {
         OnPauseAction?.Invoke(this, EventArgs.Empty);
