@@ -8,7 +8,7 @@ public class PlayerSquare : MonoBehaviour
 
     [SerializeField] private Collider2D playerSquareCollider2D;
 
-    private bool isInsideHandshake = false;
+    private bool isInsideTargetZone = false;
 
     private void Awake()
     {
@@ -25,17 +25,17 @@ public class PlayerSquare : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        isInsideHandshake = true;
+        isInsideTargetZone = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        isInsideHandshake = false;
+        isInsideTargetZone = false;
     }
 
-    public bool IsInsideHandshake()
+    public bool IsInsideTargetZone()
     {
-        return isInsideHandshake;
+        return isInsideTargetZone;
     }
 
 }

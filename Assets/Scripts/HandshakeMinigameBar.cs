@@ -31,7 +31,7 @@ public class HandshakeMinigameBar : MonoBehaviour
     {
         if (MinigameManager.Instance.IsGamePlaying()) 
         { 
-            if (PlayerSquare.Instance.IsInsideHandshake())
+            if (PlayerSquare.Instance.IsInsideTargetZone())
             {
                 MoveSquare();
                 MoveHandshake();
