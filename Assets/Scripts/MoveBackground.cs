@@ -17,14 +17,16 @@ public class MoveBackground : MonoBehaviour
 	void Update () {
         //OffSet += Speed * Time.deltaTime;
         //currentMaterial.SetTextureOffset("_MainTex", new Vector2(OffSet, 0));
-
-        OffSet += Speed * Time.deltaTime;
-        if (Mathf.Abs(OffSet) > 1.0f)
+        if (MinigameManager.Instance.IsGamePlaying())
         {
-            // Se Offset ultrapassar 1, reinicie para evitar deformações
-            OffSet = 0.0f;
-        }
+            OffSet += Speed * Time.deltaTime;
+            if (Mathf.Abs(OffSet) > 1.0f)
+            {
+                // Se Offset ultrapassar 1, reinicie para evitar deformações
+                OffSet = 0.0f;
+            }
 
-        currentMaterial.SetTextureOffset("_MainTex", new Vector2(OffSet, 0));
+            currentMaterial.SetTextureOffset("_MainTex", new Vector2(OffSet, 0));
+        }
     }
 }
