@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6047f7a5f6fae374daedf3cb12a0573a
+guid: fbd4b2d5d893d3549bf3f90d705ea1ce
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: distraido_andando_0
+      name: handShaking_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 66
-        width: 26
-        height: 69
+        x: 5
+        y: 314
+        width: 70
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 396543f5d1da63241ad0d237f7e9d27c
-      internalID: 1409927320
+      spriteID: 1d1a886f0b911f64e9aeee067117b5e5
+      internalID: 1057292924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: distraido_andando_1
+      name: handShaking_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 66
-        width: 26
-        height: 69
+        x: 89
+        y: 314
+        width: 70
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a025c23a1c8d9498f7d3add9672549
-      internalID: -1273012144
+      spriteID: a6510378447044047bbd9a7c87bc1d25
+      internalID: 1135236733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: distraido_andando_2
+      name: handShaking_2
       rect:
         serializedVersion: 2
-        x: 84
-        y: 66
-        width: 26
-        height: 69
+        x: 170
+        y: 314
+        width: 70
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d6c0c6ff07c7245a812b22758f17ae
-      internalID: -779655868
+      spriteID: afe1783b21b1edf4e99caf9edeeb5aa5
+      internalID: -1806996661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: distraido_andando_3
+      name: handShaking_3
       rect:
         serializedVersion: 2
-        x: 121
-        y: 66
-        width: 26
-        height: 69
+        x: 249
+        y: 314
+        width: 70
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60e8d1111927566498d5a4963626c529
-      internalID: -68322063
+      spriteID: 2d79cd29ff06612468fb849b73296bcd
+      internalID: -265154340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: distraido_andando_4
+      name: handShaking_4
       rect:
         serializedVersion: 2
-        x: 161
-        y: 66
-        width: 26
-        height: 69
+        x: 327
+        y: 312
+        width: 70
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1771a5d265df974e8348f53c7a5cf3f
-      internalID: 1662466539
+      spriteID: f6f43d52db6a80340af8b61ae73dc87f
+      internalID: -1255345904
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      distraido_andando_0: 1409927320
-      distraido_andando_1: -1273012144
-      distraido_andando_2: -779655868
-      distraido_andando_3: -68322063
-      distraido_andando_4: 1662466539
+      handShaking_0: 1057292924
+      handShaking_1: 1135236733
+      handShaking_2: -1806996661
+      handShaking_3: -265154340
+      handShaking_4: -1255345904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
