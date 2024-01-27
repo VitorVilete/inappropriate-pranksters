@@ -18,6 +18,7 @@ public class GamePauseUI : MonoBehaviour
         retryLevelButton.onClick.AddListener(() =>
         {
             Loader.ReloadScene();
+            Time.timeScale = 1f;
         });
         mainMenuLevelButton.onClick.AddListener(() =>
         {
