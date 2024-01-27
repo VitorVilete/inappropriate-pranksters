@@ -10,20 +10,16 @@ public class HandshakeMinigameBar : MonoBehaviour
     [SerializeField] private Rigidbody2D playerSquareRigidBody2D;
     [SerializeField] private Rigidbody2D handshakeRigidBody2D;
 
-    private float speed = 100f;
-    private float speedHandshake = 50f;
+    private float speed = 10f;
+    private float speedHandshake = 5f;
     private float movingTimerMax = 2f;
     private float movingTimerMin = 0.2f;
     private float movingTimer;
-    private float damageValue = 1f;
-    private float maxHealth = 100f;
-    private float currentHealth;
     private int handshakeDirection = 1;
 
     private void Start()
     {
         gameInput.OnInteractAction += GameInput_OnInteractAction;
-        currentHealth = maxHealth;
     }
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e)

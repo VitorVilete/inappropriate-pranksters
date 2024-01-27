@@ -9,12 +9,17 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance { get; private set; }
 
     public event EventHandler OnStateChanged;
+    public event EventHandler OnGamePaused;
+    public event EventHandler OnGameUnpaused;
+
 
     private float waitingToStartTimer = 1f;
     private float countdownToStartTimer = 3f;
     private float gamePlayingTimer;
     private float gamePlayingTimerMax = 60f;
     private bool isWin = true;
+    private bool isGamePaused = false;
+
 
     private enum State
     {
@@ -31,6 +36,17 @@ public class MinigameManager : MonoBehaviour
         Instance = this;
         state = State.WaitingToStart;
     }
+
+    private void Start()
+    {
+        GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
+    }
+
+    private void GameInput_OnPauseAction(object sender, EventArgs e)
+    {
+        TogglePauseGame();
+    }
+
 
     private void Update()
     {
@@ -110,5 +126,24 @@ public class MinigameManager : MonoBehaviour
         state = State.GameOver;
         OnStateChanged?.Invoke(this, EventArgs.Empty);
     }
+
+    public void TogglePauseGame()
+    {
+        if (state != State.GameOver)
+        {
+            isGamePaused = !isGamePaused;
+            if (isGamePaused)
+            {
+                Time.timeScale = 0f;
+                OnGamePaused?.Invoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                OnGameUnpaused?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+
 
 }
