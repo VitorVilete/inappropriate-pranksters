@@ -28,9 +28,17 @@ public class GameInput : MonoBehaviour
     private void Update()
     {
         #if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.U))
+        if (MinigameManager.Instance != null)
         {
-            Loader.Load(Loader.Scene.GameIntermissionScene);
+            if (Input.GetKey(KeyCode.U))
+            {
+                MinigameManager.Instance.triggerGameOver();
+            }
+            if (Input.GetKey(KeyCode.I))
+            {
+                MinigameManager.Instance.triggerLose();
+                MinigameManager.Instance.triggerGameOver();
+            }
         }
         #endif
     }

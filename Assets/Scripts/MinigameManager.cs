@@ -9,13 +9,12 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance { get; private set; }
 
     public event EventHandler OnStateChanged;
-    // TODO: Invoke OnDamageTaken so that the HealthBar component can update
-    public event EventHandler OnDamageTaken;
 
     private float waitingToStartTimer = 1f;
     private float countdownToStartTimer = 3f;
     private float gamePlayingTimer;
     private float gamePlayingTimerMax = 60f;
+    private bool isWin = true;
 
     private enum State
     {
@@ -58,12 +57,13 @@ public class MinigameManager : MonoBehaviour
                 gamePlayingTimer -= Time.deltaTime;
                 if (gamePlayingTimer < 0f)
                 {
-                    state = State.GameOver;
-                    OnStateChanged?.Invoke(this, EventArgs.Empty);
+                    triggerGameOver();
                 }
                 break;
             case State.GameOver:
                 Debug.Log("Game Over");
+                Debug.Log("isWin? " + isWin);
+
                 break;
             default:
                 break;
@@ -93,6 +93,22 @@ public class MinigameManager : MonoBehaviour
     public float GetGamePlayingTimerNormalized()
     {
         return 1 - (gamePlayingTimer / gamePlayingTimerMax);
+    }
+
+    public bool IsWin()
+    {
+        return isWin;
+    }
+
+    public void triggerLose()
+    {
+        isWin = false;
+    }
+
+    public void triggerGameOver()
+    {
+        state = State.GameOver;
+        OnStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
 }

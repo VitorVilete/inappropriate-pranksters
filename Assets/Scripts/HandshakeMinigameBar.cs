@@ -35,17 +35,16 @@ public class HandshakeMinigameBar : MonoBehaviour
     {
         if (MinigameManager.Instance.IsGamePlaying()) 
         { 
-            if (currentHealth <= 0)
+            if (PlayerSquare.Instance.IsInsideHandshake())
             {
-                Debug.Log("You Lose!");
+                MoveSquare();
+                MoveHandshake();
             }
-            if (!PlayerSquare.Instance.IsInsideHandshake())
+            else
             {
-                currentHealth -= damageValue * Time.deltaTime;
-                Debug.Log(currentHealth);
+                MinigameManager.Instance.triggerLose();
+                MinigameManager.Instance.triggerGameOver();
             }
-            MoveSquare();
-            MoveHandshake();
         }
     }
 
@@ -90,7 +89,7 @@ public class HandshakeMinigameBar : MonoBehaviour
     private void SetNewHandshakeDirection()
     {
         handshakeDirection = handshakeDirection * -1;
-	handshakeRigidBody2D.velocity = Vector2.zero;
+        handshakeRigidBody2D.velocity = Vector2.zero;
     }
 
 

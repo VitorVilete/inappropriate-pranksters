@@ -28,6 +28,12 @@ public static class Loader
         SceneManager.LoadScene(Scene.LoadingScene.ToString());
     }
 
+    public static void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
     public static void LoaderCallback()
     {
         SceneManager.LoadScene(targetScene.ToString());
