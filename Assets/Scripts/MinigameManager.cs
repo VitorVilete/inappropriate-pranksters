@@ -11,7 +11,11 @@ public class MinigameManager : MonoBehaviour
     public event EventHandler OnStateChanged;
     public event EventHandler OnGamePaused;
     public event EventHandler OnGameUnpaused;
-
+    public event EventHandler<OnGameOverEventArgs> OnGameOver;
+    public class OnGameOverEventArgs : EventArgs
+    {
+        public bool isWin;
+    }
 
     private float waitingToStartTimer = 1f;
     private float countdownToStartTimer = 3f;
@@ -101,6 +105,7 @@ public class MinigameManager : MonoBehaviour
         return state == State.GameOver;
     }
 
+
     public float GetCountdownToStartTimer()
     {
         return countdownToStartTimer;
@@ -124,6 +129,10 @@ public class MinigameManager : MonoBehaviour
     public void triggerGameOver()
     {
         state = State.GameOver;
+        OnGameOver?.Invoke(this, new OnGameOverEventArgs
+        {
+            isWin = isWin
+        });
         OnStateChanged?.Invoke(this, EventArgs.Empty);
     }
 

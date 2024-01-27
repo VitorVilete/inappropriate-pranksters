@@ -10,7 +10,7 @@ public class PlayerPersonVisual : MonoBehaviour
 
     void Start()
     {
-        MinigameManager.Instance.OnStateChanged += MinigameManager_OnStateChanged;        
+        MinigameManager.Instance.OnStateChanged += MinigameManager_OnStateChanged;
     }
 
     private void MinigameManager_OnStateChanged(object sender, System.EventArgs e)

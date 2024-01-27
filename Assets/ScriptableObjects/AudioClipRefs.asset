@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a191eba186589742a05aabf653aa235, type: 3}
+  m_Name: AudioClipRefs
+  m_EditorClassIdentifier: 
+  clap: []
+  laughter:
+  - {fileID: 8300000, guid: 5ae039abb9ad3a94d939a8fddb20aaa7, type: 3}
+  - {fileID: 8300000, guid: e3871697e68bfae459d0cfa229e7af86, type: 3}
+  levelWin: {fileID: 8300000, guid: 56d62310d4d36134ab5fe12d22e94722, type: 3}
+  levelLoss: {fileID: 8300000, guid: 6e613ae9808652b40944a882bb94a06f, type: 3}
