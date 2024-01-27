@@ -9,6 +9,15 @@ public class StealthMinigameBar : MonoBehaviour
     
     private float playerBackSpeed = 5f;
     private float playerForwardSpeed = 10f;
+    private float randomModifierIntervalTotal = 5f;
+    private float movingTimer;
+
+    public float secondPersonMinMovingSpeed;
+    public float secondPersonMaxMovingSpeed;
+    public Rigidbody2D secondPersonRigidbody2D;
+
+    private bool movingSecondPersonForward = false;
+    private bool movingSecondPersonBack = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +31,16 @@ public class StealthMinigameBar : MonoBehaviour
             if (!PlayerSquare.Instance.IsInsideTargetZone())
             {
                 MovePlayer();
+
+                if (movingSecondPersonForward)
+                {
+                    MoveSecondPersonForward();
+                } else if (movingSecondPersonBack)
+                {
+                    MoveSecondPersonBack();
+                }
+
+                RandomizeModifier();
             }
             else
             {
@@ -41,5 +60,51 @@ public class StealthMinigameBar : MonoBehaviour
         {
             playerRigidBody2D.velocity -= new Vector2(playerBackSpeed * Time.deltaTime, 0);
         }
+    }
+
+    private void RandomizeModifier()
+    {
+        movingTimer -= Time.deltaTime;
+        if (movingTimer <= 0)
+        {
+            ResetMovingTimer();
+            //randomize modifier
+            secondPersonRigidbody2D.velocity = Vector2.zero;
+            int randomNumber = Random.Range(1, 3);
+            switch (randomNumber)
+            {
+                case 1:
+                    Debug.Log("Case 1");
+                    movingSecondPersonForward = true;
+                    movingSecondPersonBack = false;
+                    break;
+                case 2:
+                    Debug.Log("Case 2");
+                    movingSecondPersonForward = false;
+                    movingSecondPersonBack = true;
+                    break;
+                case 3:
+                    Debug.Log("Case 3");
+                    movingSecondPersonForward = false;
+                    movingSecondPersonBack = false;
+                    break;
+            }
+        }
+    }
+
+    private void ResetMovingTimer()
+    {
+        movingTimer = randomModifierIntervalTotal;
+    }
+    private void MoveSecondPersonForward()
+    {
+        float secondPersonMovingSpeed = Random.Range(secondPersonMinMovingSpeed, secondPersonMaxMovingSpeed); 
+        secondPersonRigidbody2D.velocity += new Vector2(secondPersonMovingSpeed * Time.deltaTime, 0);
+    }
+
+    private void MoveSecondPersonBack()
+    {
+        float secondPersonMovingSpeed = Random.Range(secondPersonMinMovingSpeed, secondPersonMaxMovingSpeed);
+        secondPersonRigidbody2D.velocity -= new Vector2(secondPersonMovingSpeed * Time.deltaTime, 0);
     }
 }
