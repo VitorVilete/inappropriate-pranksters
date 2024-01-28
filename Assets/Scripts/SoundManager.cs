@@ -37,8 +37,8 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void PlaySound(AudioClip audioClip, float volume = 1)
+    private void PlaySound(AudioClip audioClip, float volume = 0.2f)
     {
-        AudioSource.PlayClipAtPoint(audioClip, Vector3.zero, volume);
+        AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position, volume);
     }
 }
