@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicManager : MonoBehaviour
+public class AmbientSoundManager : MonoBehaviour
 {
-    public static MusicManager Instance { get; private set; }
     [SerializeField] private AudioSource audioSource;
-
-
+    [SerializeField] private AudioClip audioClip;
     private void Awake()
     {
-        Instance = this;
+        audioSource.clip = audioClip;
     }
 
     private void Start()

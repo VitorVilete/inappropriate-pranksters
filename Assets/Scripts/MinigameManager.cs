@@ -12,6 +12,7 @@ public class MinigameManager : MonoBehaviour
     public event EventHandler OnGamePaused;
     public event EventHandler OnGameUnpaused;
     public event EventHandler<OnGameOverEventArgs> OnGameOver;
+    public event EventHandler OnGamePlaying;
     public class OnGameOverEventArgs : EventArgs
     {
         public bool isWin;
@@ -71,6 +72,7 @@ public class MinigameManager : MonoBehaviour
                     state = State.GamePlaying;
                     gamePlayingTimer = gamePlayingTimerMax;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
+                    OnGamePlaying?.Invoke(this, EventArgs.Empty);
                 }
                 break;
             case State.GamePlaying:
