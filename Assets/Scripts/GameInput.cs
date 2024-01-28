@@ -30,11 +30,11 @@ public class GameInput : MonoBehaviour
         #if UNITY_EDITOR
         if (MinigameManager.Instance != null)
         {
-            if (Input.GetKey(KeyCode.U))
+            if (Input.GetKeyUp(KeyCode.U))
             {
                 MinigameManager.Instance.triggerGameOver();
             }
-            if (Input.GetKey(KeyCode.I))
+            if (Input.GetKeyUp(KeyCode.I))
             {
                 MinigameManager.Instance.triggerLose();
                 MinigameManager.Instance.triggerGameOver();
