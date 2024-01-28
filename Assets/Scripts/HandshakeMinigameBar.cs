@@ -11,7 +11,7 @@ public class HandshakeMinigameBar : MonoBehaviour
     [SerializeField] private Rigidbody2D handshakeRigidBody2D;
 
     private float speed = 10f;
-    private float speedHandshake = 5f;
+    private float speedHandshake = 2.5f;
     private float movingTimerMax = 2f;
     private float movingTimerMin = 0.2f;
     private float movingTimer;

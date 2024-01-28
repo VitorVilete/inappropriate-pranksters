@@ -1688,7 +1688,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!1 &1403593880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,7 +1893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608523104}
   - component: {fileID: 1608523105}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SquareCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952706128}
   - component: {fileID: 1952706129}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SquareCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

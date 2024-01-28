@@ -16,8 +16,8 @@ public class StealthMinigameBar : MonoBehaviour
     public float secondPersonMaxMovingSpeed;
     public Rigidbody2D secondPersonRigidbody2D;
 
-    private bool movingSecondPersonForward = false;
-    private bool movingSecondPersonBack = false;
+    private bool movingSecondPersonForward;
+    private bool movingSecondPersonBack;
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +34,14 @@ public class StealthMinigameBar : MonoBehaviour
 
                 if (movingSecondPersonForward)
                 {
-                    MoveSecondPersonForward();
+                    MoveBodyForward(secondPersonRigidbody2D);
                 } else if (movingSecondPersonBack)
-                {
-                    MoveSecondPersonBack();
+                { 
+                    MoveBodyBack(secondPersonRigidbody2D);
                 }
 
                 RandomizeModifier();
+
             }
             else
             {
@@ -96,13 +97,13 @@ public class StealthMinigameBar : MonoBehaviour
     {
         movingTimer = randomModifierIntervalTotal;
     }
-    private void MoveSecondPersonForward()
+    private void MoveBodyForward(Rigidbody2D secondPersonRigidbody2D)
     {
         float secondPersonMovingSpeed = Random.Range(secondPersonMinMovingSpeed, secondPersonMaxMovingSpeed); 
         secondPersonRigidbody2D.velocity += new Vector2(secondPersonMovingSpeed * Time.deltaTime, 0);
     }
 
-    private void MoveSecondPersonBack()
+    private void MoveBodyBack(Rigidbody2D secondPersonRigidbody2D)
     {
         float secondPersonMovingSpeed = Random.Range(secondPersonMinMovingSpeed, secondPersonMaxMovingSpeed);
         secondPersonRigidbody2D.velocity -= new Vector2(secondPersonMovingSpeed * Time.deltaTime, 0);
