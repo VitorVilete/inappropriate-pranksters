@@ -833,6 +833,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a725ffbb5c04e24f954c8cdb39b54f2, type: 2}
   - {fileID: 11400000, guid: dd0c69482e00f40458bf0a2c0b2366eb, type: 2}
   - {fileID: 11400000, guid: b2ed652849d687e439c2f32630eee773, type: 2}
+  - {fileID: 11400000, guid: b2ed652849d687e439c2f32630eee773, type: 2}
+  - {fileID: 11400000, guid: dd0c69482e00f40458bf0a2c0b2366eb, type: 2}
+  - {fileID: 11400000, guid: 8a725ffbb5c04e24f954c8cdb39b54f2, type: 2}
+  - {fileID: 11400000, guid: dd0c69482e00f40458bf0a2c0b2366eb, type: 2}
+  - {fileID: 11400000, guid: 8a725ffbb5c04e24f954c8cdb39b54f2, type: 2}
+  - {fileID: 11400000, guid: dd0c69482e00f40458bf0a2c0b2366eb, type: 2}
+  - {fileID: 11400000, guid: 8a725ffbb5c04e24f954c8cdb39b54f2, type: 2}
   noiseTVChannelSO: {fileID: 11400000, guid: c0bf27bf00a1e4a41b8f0c300f209506, type: 2}
   laughterMeterSlider: {fileID: 343295778}
   gameInput: {fileID: 559760273}

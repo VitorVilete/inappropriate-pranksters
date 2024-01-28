@@ -13,7 +13,7 @@ public class InterviewMinigame : MonoBehaviour
     private TVChannelSO currentTVChannelSO;
     private float laughterMeter;
     private float laughterMeterMin = 0f;
-    private float laughterDamageMin = 3f;
+    private float laughterDamageMin = 1f;
     private float laughterDamageMax = 10f;
     private float laughterRecover = 1f;
     private float laughterMeterMax = 100f;

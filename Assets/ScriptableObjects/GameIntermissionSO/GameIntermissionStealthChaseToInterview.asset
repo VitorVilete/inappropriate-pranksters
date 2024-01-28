@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: GameIntermissionStealthChaseToInterview
   m_EditorClassIdentifier: 
   previousScene: 3
-  gameIntermissionText: 'This next Prank is the Interview Prank! It consists in one
-    of our pranksters [...]
-
-
-    And this time Fulano will tackle the challenge!'
+  gameIntermissionText: "As for the last Prank, we have the Interview Prank!\n \nOur
+    serious guy, Joe, will be the one carrying this interview.\n\nBut what he doesn't
+    know is that on the TV behind the interviewed will be changing channels with
+    things that are funny or not and he CANNOT laugh.\n\nInstructions:\nHold your
+    laughter at the correct time and avoid filling up the laughter bar!\n\nHold [Space]
+    to hold your laughter\n[Esc] to pause"
   nextScene: 2

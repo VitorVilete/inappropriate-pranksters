@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: GameIntermissionMainMenuToHandshake
   m_EditorClassIdentifier: 
   previousScene: 5
-  gameIntermissionText: 'Hello and welcome everyone to the Inappropriate Pranksters!
-    In this show [...]
-
-
-    This next Prank is the Handshake Prank! It consists
-    in one of our pranksters [...]
-
-
-    And this time Fulano will tackle the challenge!'
+  gameIntermissionText: "Hello and welcome everyone to the first episode of Inappropriate
+    Pranksters! \nIn this show, we try to one up each other when it comes to embarrasing
+    pranks.\n\nOur first Prank for this episode will be the Handshake Prank!\nIt
+    consists in one of our Pranksters trying to hold a handshake with a stranger
+    for a full minute.\n\nPlease give a round of applause for our first Prankster,
+    Barry!\n\nInstructions:\nKeep the Blue Ball inside the Green Square. \nYou only
+    control the Green Square and the Blue Ball moves in random directions.\nBe careful
+    as the ball suddenly move directions!\n\nHold [Space] to move the square right\nRelease
+    [Space] to move the square left\n[Esc] to pause"
   nextScene: 0

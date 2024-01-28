@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: GameIntermissionHandshakeToStealthChase
   m_EditorClassIdentifier: 
   previousScene: 0
-  gameIntermissionText: 'This next Prank is the Stealth Chase Prank! It consists
-    in one of our pranksters [...]
-
-
-    And this time Fulano will tackle the challenge!'
+  gameIntermissionText: "This next Prank is the Stealth Chase Prank! \n\nOne of our
+    pranksters will have to follow an unsuspecting stranger real close without them
+    noticing it.\n\nAnd this time our masked trickster, Spencer, will sneak up his
+    way to victory!\n\nInstructions:\nControl the Blue Square and avoid touching
+    the Red Squares!\n\nHold [Space] to move the Blue Square right\nRelease [Space]
+    to move the Blue Square left\n[Esc] to pause"
   nextScene: 3
